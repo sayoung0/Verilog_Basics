@@ -1,0 +1,71 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000001995057bb60 .scope module, "wire_wand_example_tb" "wire_wand_example_tb" 2 5;
+ .timescale -9 -12;
+v0000019950446cc0_0 .var "tb_a", 0 0;
+v0000019950446d60_0 .var "tb_b", 0 0;
+v00000199504445a0_0 .var "tb_c", 0 0;
+v0000019950444280_0 .net "tb_w_buf", 0 0, L_0000019950446e00;  1 drivers
+v0000019950443d80_0 .net "tb_w_nor", 0 0, L_000001995057bd90;  1 drivers
+RS_00000199504490c8 .resolv triand, L_00000199504908b0, L_0000019950490df0;
+v0000019950444a00_0 .net8 "tb_w_wand", 0 0, RS_00000199504490c8;  2 drivers
+RS_00000199504490f8 .resolv tri, L_0000019950446e70, L_0000019950444b60;
+v0000019950443c40_0 .net8 "tb_w_wire", 0 0, RS_00000199504490f8;  2 drivers
+S_0000019950446a90 .scope module, "UUT" "wand_ex" 2 10, 3 3 0, S_000001995057bb60;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "w_nor";
+    .port_info 4 /OUTPUT 1 "w_buf";
+    .port_info 5 /OUTPUT 1 "w_wire";
+    .port_info 6 /OUTPUT 1 "w_wand";
+L_000001995057bd90 .functor NOR 1, v0000019950446cc0_0, v0000019950446d60_0, C4<0>, C4<0>;
+L_0000019950446e00 .functor BUF 1, v00000199504445a0_0, C4<0>, C4<0>, C4<0>;
+L_0000019950446e70 .functor NOR 1, v0000019950446cc0_0, v0000019950446d60_0, C4<0>, C4<0>;
+L_0000019950444b60 .functor BUF 1, v00000199504445a0_0, C4<0>, C4<0>, C4<0>;
+L_00000199504908b0 .functor NOR 1, v0000019950446cc0_0, v0000019950446d60_0, C4<0>, C4<0>;
+L_0000019950490df0 .functor BUF 1, v00000199504445a0_0, C4<0>, C4<0>, C4<0>;
+v0000019950413340_0 .net "a", 0 0, v0000019950446cc0_0;  1 drivers
+v00000199504130e0_0 .net "b", 0 0, v0000019950446d60_0;  1 drivers
+v0000019950413560_0 .net "c", 0 0, v00000199504445a0_0;  1 drivers
+v000001995057bcf0_0 .net "w_buf", 0 0, L_0000019950446e00;  alias, 1 drivers
+v0000019950436800_0 .net "w_nor", 0 0, L_000001995057bd90;  alias, 1 drivers
+v00000199504368a0_0 .net8 "w_wand", 0 0, RS_00000199504490c8;  alias, 2 drivers
+v0000019950446c20_0 .net8 "w_wire", 0 0, RS_00000199504490f8;  alias, 2 drivers
+    .scope S_000001995057bb60;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "wire_wand_example.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001995057bb60 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019950446cc0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000019950446d60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000199504445a0_0, 0, 1;
+    %delay 1000, 0;
+    %vpi_call 2 31 "$display", "Time: %0t ps | a=%b, b=%b, c=%b | w_nor=%b, w_buf=%b, w_wire=%b, w_wand=%b", $time, v0000019950446cc0_0, v0000019950446d60_0, v00000199504445a0_0, v0000019950443d80_0, v0000019950444280_0, v0000019950443c40_0, v0000019950444a00_0 {0 0 0};
+    %delay 3013087232, 11408;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019950446cc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000019950446d60_0, 0, 1;
+    %delay 1000, 0;
+    %vpi_call 2 43 "$display", "Time: %0t ps | a=%b, b=%b, c=%b | w_nor=%b, w_buf=%b, w_wire=%b, w_wand=%b", $time, v0000019950446cc0_0, v0000019950446d60_0, v00000199504445a0_0, v0000019950443d80_0, v0000019950444280_0, v0000019950443c40_0, v0000019950444a00_0 {0 0 0};
+    %delay 3671154688, 12572;
+    %vpi_call 2 48 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "wire_wand_example_tb.v";
+    "wire_wand_example.v";

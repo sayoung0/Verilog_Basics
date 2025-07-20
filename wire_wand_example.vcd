@@ -1,0 +1,47 @@
+$date
+	Sun Jul 20 23:59:37 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module wire_wand_example_tb $end
+$var wire 1 ! tb_w_wand $end
+$var wire 1 " tb_w_wire $end
+$var wire 1 # tb_w_nor $end
+$var wire 1 $ tb_w_buf $end
+$var reg 1 % tb_a $end
+$var reg 1 & tb_b $end
+$var reg 1 ' tb_c $end
+$scope module UUT $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ' c $end
+$var wire 1 $ w_buf $end
+$var wire 1 # w_nor $end
+$var wire 1 ! w_wand $end
+$var wire 1 " w_wire $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0'
+0&
+0%
+0$
+1#
+x"
+0!
+$end
+#49000000001000
+0#
+0"
+1&
+1%
+#103000000002000
