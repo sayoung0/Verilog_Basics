@@ -16,3 +16,5 @@
 iverilog -o wire_wand_example_sim wire_wand_example.v wire_wand_example_tb.v
 vvp wire_wand_example_sim
 gtkwave wire_wand_example.vcd
+# gtkwave 문제 시 $display로 실행
+# Verilog-2001 문법을 따라 input reg를 input으로 지정
