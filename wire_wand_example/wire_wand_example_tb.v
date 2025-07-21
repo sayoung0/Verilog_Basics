@@ -26,21 +26,21 @@ module wire_wand_example_tb;
         tb_b = 1'b0;
         tb_c = 1'b0;
 
-        // 초기 값 출력 (Time 0ns 이후, 논리 전파를 위해 아주 작은 지연을 줍니다)
-        #1; // 1ps 지연 (timescale에 의해) - 'ps' 단위 문자 제거
+        // 초기 값 출력 
+        #1; // 1ps 지연 (timescale에 의해)
         $display("Time: %0t ps | a=%b, b=%b, c=%b | w_nor=%b, w_buf=%b, w_wire=%b, w_wand=%b",
-                 $time, tb_a, tb_b, tb_c, tb_w_nor, tb_w_buf, tb_w_wire, tb_w_wand); // 'ns' 문자 제거하고 'ps'로 변경
+                 $time, tb_a, tb_b, tb_c, tb_w_nor, tb_w_buf, tb_w_wire, tb_w_wand); 
 
-        #49000000000; // 49ns 지연 (49 * 1,000,000,000 ps = 490억 ps) - 'ns' 단위 문자 제거
+        #49000000000; // 49ns 지연 (49 * 1,000,000,000 ps = 490억 ps) 
 
         // 50ns 시점에서 입력 변경
         tb_a = 1'b1;
         tb_b = 1'b1;
         
-        // 변경된 후 값 출력 (50ns 이후, 논리 전파를 위해 아주 작은 지연을 줍니다)
+        // 변경된 후 값 출력 (50ns 이후, 논리 전파를 위한 지연)
         #1; // 1ps 지연 - 'ps' 단위 문자 제거
         $display("Time: %0t ps | a=%b, b=%b, c=%b | w_nor=%b, w_buf=%b, w_wire=%b, w_wand=%b",
-                 $time, tb_a, tb_b, tb_c, tb_w_nor, tb_w_buf, tb_w_wire, tb_w_wand); // 'ns' 문자 제거하고 'ps'로 변경
+                 $time, tb_a, tb_b, tb_c, tb_w_nor, tb_w_buf, tb_w_wire, tb_w_wand); 
 
         #54000000000; // 54ns 지연 (54 * 1,000,000,000 ps = 540억 ps)
                       // 총 시뮬레이션 시간 ~105ns (1ps + 49ns + 1ps + 54ns)

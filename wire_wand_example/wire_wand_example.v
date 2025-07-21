@@ -10,7 +10,6 @@ module wand_ex (
     output wand w_wand
 );
 
-    // --- (여기에 initial begin ... end 블록은 완전히 제거되어야 합니다!) ---
 
     // 게이트 연결
     nor (w_nor, a, b);
