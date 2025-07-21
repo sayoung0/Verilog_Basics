@@ -1,0 +1,64 @@
+# Vivado generated files
+*.log
+*.jou
+*.wdb
+*.bit
+*.bin
+*.elf
+*.mcs
+*.mem
+*.sys
+*.tcl
+*.xml
+*.rpt
+*.str
+*.html
+*.txt
+*.csv
+*.dat
+*.out
+*.vcd
+
+# Simulation files and directories
+xsim/
+sim/
+*.sim/
+
+# Project directories
+.Xil/
+.ipcache/
+.cache/
+.runs/
+.sim/
+.srcs/
+.hw/
+.ip_user_files/
+.data/
+.metadata/
+.settings/
+.project/
+.cproject/
+
+# Specific Vivado project files
+*.xpr.backup
+*.xpr.lock
+*.xpr.dir
+*.xpr.srcs
+*.xpr.data
+*.xpr.cache
+*.xpr.runs
+*.xpr.sim
+*.xpr.hw
+*.xpr.ip_user_files
+*.xpr.ipcache
+*.xpr.metadata
+*.xpr.settings
+*.xpr.project
+*.xpr.cproject
+
+# Other common files to ignore
+*.bak
+*.tmp
+*~
+*.DS_Store
+Thumbs.db

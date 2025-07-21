@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['walk-crossing']
+
+roboflow:
+  workspace: gopdata-axf2f
+  project: data_crossing_augment
+  version: 8
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/gopdata-axf2f/data_crossing_augment/dataset/8
