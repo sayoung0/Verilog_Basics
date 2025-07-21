@@ -38,7 +38,7 @@ module wire_wand_example_tb;
         tb_b = 1'b1;
         
         // 변경된 후 값 출력 (50ns 이후, 논리 전파를 위한 지연)
-        #1; // 1ps 지연 - 'ps' 단위 문자 제거
+        #1; // 1ps 지연 
         $display("Time: %0t ps | a=%b, b=%b, c=%b | w_nor=%b, w_buf=%b, w_wire=%b, w_wand=%b",
                  $time, tb_a, tb_b, tb_c, tb_w_nor, tb_w_buf, tb_w_wire, tb_w_wand); 
 
